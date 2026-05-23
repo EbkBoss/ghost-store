@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claim Your Product — Ghost</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e0e0e0;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.card{background:#111122;border:1px solid #1e3a5f;border-radius:16px;padding:40px;max-width:500px;width:100%}
+h1{color:#00d4ff;font-size:1.8em;margin-bottom:8px}
+.sub{color:#8899aa;margin-bottom:25px;font-size:0.95em}
+label{display:block;color:#aab;margin-bottom:6px;font-size:0.85em}
+input,select{width:100%;padding:12px 16px;background:#0d0d1a;border:1px solid #1e3a5f;border-radius:8px;color:#e0e0e0;font-size:1em;margin-bottom:18px;outline:none}
+input:focus,select:focus{border-color:#00d4ff}
+.btn{width:100%;padding:14px;background:linear-gradient(90deg,#00d4ff,#7b2ff7);color:#fff;border:none;border-radius:8px;font-size:1.1em;font-weight:bold;cursor:pointer;transition:opacity 0.2s}
+.btn:hover{opacity:0.9}
+.hint{color:#445;font-size:0.8em;margin-top:10px;text-align:center}
+.status{margin-top:15px;padding:12px;border-radius:8px;display:none;text-align:center}
+.status-ok{background:#0a2a1a;border:1px solid #00d4ff;color:#00d4ff}
+.status-err{background:#2a0a0a;border:1px solid #ff4466;color:#ff4466}
+.loading{text-align:center;color:#556;display:none;margin:10px 0}
+</style></head><body>
+<div class="card">
+    <h1>Ghost</h1>
+    <div class="sub">Claim your purchase. Enter your email and the product you bought.</div>
+    <form id="claimForm">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label for="product">Product You Purchased</label>
+        <select id="product" required>
+            <option value="">— Select product —</option>
+            <option value="Real Estate Investing Business Template Pack — 25 Ready-to-Use Templates">Real Estate Investing Business Template Pack — 25 Ready-to-Use Templates — $27</option><option value="Customer Service Automation Toolkit — 50 AI-Powered Resources">Customer Service Automation Toolkit — 50 AI-Powered Resources — $32</option><option value="AI Image Generation Business Template Pack — 25 Ready-to-Use Templates">AI Image Generation Business Template Pack — 25 Ready-to-Use Templates — $15</option><option value="AI Content Creation Business Template Pack — 25 Ready-to-Use Templates">AI Content Creation Business Template Pack — 25 Ready-to-Use Templates — $35</option><option value="SEO Optimization Business Template Pack — 25 Ready-to-Use Templates">SEO Optimization Business Template Pack — 25 Ready-to-Use Templates — $12</option><option value="Real Estate Investing Prompt Pack — 100 ChatGPT Prompts for Marketers">Real Estate Investing Prompt Pack — 100 ChatGPT Prompts for Marketers — $11</option><option value="Digital Marketing Prompt Pack — 100 ChatGPT Prompts for Freelancers">Digital Marketing Prompt Pack — 100 ChatGPT Prompts for Freelancers — $11</option><option value="Affiliate Marketing Business Template Pack — 25 Ready-to-Use Templates">Affiliate Marketing Business Template Pack — 25 Ready-to-Use Templates — $21</option><option value="The Professionals Guide to AI Image Generation — Complete Blueprint">The Professionals Guide to AI Image Generation — Complete Blueprint — $14</option><option value="AI Image Generation Prompt Pack — 100 ChatGPT Prompts for Entrepreneurs">AI Image Generation Prompt Pack — 100 ChatGPT Prompts for Entrepreneurs — $13</option><option value="Lead Generation Business Template Pack — 25 Ready-to-Use Templates">Lead Generation Business Template Pack — 25 Ready-to-Use Templates — $19</option><option value="Productivity Systems Prompt Pack — 100 ChatGPT Prompts for Beginners">Productivity Systems Prompt Pack — 100 ChatGPT Prompts for Beginners — $23</option><option value="The Marketers Guide to Podcast Production — Complete Blueprint">The Marketers Guide to Podcast Production — Complete Blueprint — $7</option><option value="AI Content Creation Prompt Pack — 100 ChatGPT Prompts for Marketers">AI Content Creation Prompt Pack — 100 ChatGPT Prompts for Marketers — $25</option><option value="The Professionals Guide to Affiliate Marketing — Complete Blueprint">The Professionals Guide to Affiliate Marketing — Complete Blueprint — $10</option><option value="Personal Finance Prompt Pack — 100 ChatGPT Prompts for Marketers">Personal Finance Prompt Pack — 100 ChatGPT Prompts for Marketers — $12</option><option value="Online Course Creation Business Template Pack — 25 Ready-to-Use Templates">Online Course Creation Business Template Pack — 25 Ready-to-Use Templates — $14</option><option value="AI Image Generation Toolkit — 50 AI-Powered Resources">AI Image Generation Toolkit — 50 AI-Powered Resources — $19</option><option value="AI Content Creation Business Template Pack — 25 Ready-to-Use Templates">AI Content Creation Business Template Pack — 25 Ready-to-Use Templates — $14</option><option value="Digital Marketing Business Template Pack — 25 Ready-to-Use Templates">Digital Marketing Business Template Pack — 25 Ready-to-Use Templates — $32</option>
+        </select>
+
+        <label for="paypal_email">PayPal Email Used (optional — for verification)</label>
+        <input type="email" id="paypal_email" placeholder="your-paypal@email.com">
+
+        <button type="submit" class="btn" id="submitBtn">Send My Product</button>
+    </form>
+    <div class="loading" id="loading">Processing your request...</div>
+    <div class="status" id="status"></div>
+    <div class="hint">After you pay on PayPal, come here to receive your product instantly.</div>
+</div>
+<script>
+document.getElementById('claimForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const product = document.getElementById('product').value;
+    const paypal_email = document.getElementById('paypal_email').value;
+    const status = document.getElementById('status');
+    const loading = document.getElementById('loading');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (!email || !product) {
+        status.className = 'status status-err';
+        status.textContent = 'Please fill in email and product.';
+        status.style.display = 'block';
+        return;
+    }
+
+    loading.style.display = 'block';
+    submitBtn.disabled = true;
+    status.style.display = 'none';
+
+    try {
+        const resp = await fetch('/claim', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({email, product, paypal_email})
+        });
+        const result = await resp.json();
+        loading.style.display = 'none';
+        submitBtn.disabled = false;
+
+        if (result.success) {
+            status.className = 'status status-ok';
+            status.innerHTML = '✅ Product sent! Check your email (including spam folder).<br>Order: #' + result.order_id;
+        } else {
+            status.className = 'status status-err';
+            status.textContent = '❌ ' + (result.error || 'Something went wrong. Email Director at paypal.me/Nicholasram17');
+        }
+    } catch(e) {
+        loading.style.display = 'none';
+        submitBtn.disabled = false;
+        status.className = 'status status-err';
+        status.textContent = '❌ System offline. Email Director at www.paypal.com/paypalme/Nicholasram17 for manual delivery.';
+    }
+    status.style.display = 'block';
+});
+</script>
+</body></html>
