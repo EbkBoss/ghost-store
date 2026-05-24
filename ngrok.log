@@ -1,0 +1,32 @@
+t=2026-05-23T20:46:37-0400 lvl=info msg="no configuration paths supplied"
+t=2026-05-23T20:46:37-0400 lvl=info msg="using configuration at default config path" path=C:\\Users\\vybzd\\AppData\\Local\\ngrok\\ngrok.yml
+t=2026-05-23T20:46:37-0400 lvl=info msg="open config file" path=C:\\Users\\vybzd\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+t=2026-05-23T20:46:37-0400 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-05-23T20:46:37-0400 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2026-05-23T20:46:38-0400 lvl=info msg="client session established" obj=tunnels.session
+t=2026-05-23T20:46:38-0400 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-05-23T20:46:38-0400 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=http://localhost:8081 url=https://scarily-blatancy-washday.ngrok-free.dev
+t=2026-05-23T20:46:41-0400 lvl=info msg=start pg=/api/tunnels id=7716a8a66696d99d
+t=2026-05-23T20:46:41-0400 lvl=info msg=end pg=/api/tunnels id=7716a8a66696d99d status=200 dur=1.07ms
+t=2026-05-23T21:01:29-0400 lvl=info msg="join connections" obj=join id=d11a2aaad95a l=127.0.0.1:8081 r=170.82.209.140:35093
+t=2026-05-23T21:01:53-0400 lvl=info msg="join connections" obj=join id=ab9f636e2222 l=127.0.0.1:8081 r=170.82.209.140:54082
+t=2026-05-23T21:01:53-0400 lvl=info msg="join connections" obj=join id=f6f8e6608bb0 l=127.0.0.1:8081 r=170.82.209.140:54082
+t=2026-05-23T21:02:34-0400 lvl=info msg="join connections" obj=join id=5468e3da71f7 l=127.0.0.1:8081 r=170.82.209.140:54082
+t=2026-05-23T21:04:54-0400 lvl=info msg="join connections" obj=join id=b8cd88879890 l=127.0.0.1:8081 r=170.82.209.140:54082
+t=2026-05-23T21:06:14-0400 lvl=info msg="join connections" obj=join id=2e1a2f9227f2 l=127.0.0.1:8081 r=170.82.209.140:57301
+t=2026-05-23T21:09:05-0400 lvl=info msg="join connections" obj=join id=007bb8b77a32 l=127.0.0.1:8081 r=170.82.209.140:60301
+t=2026-05-23T21:29:46-0400 lvl=info msg="join connections" obj=join id=769ee3867118 l=127.0.0.1:8081 r=170.82.209.140:58281
+t=2026-05-23T21:29:47-0400 lvl=info msg="join connections" obj=join id=45b64efbe80f l=127.0.0.1:8081 r=170.82.209.140:58286
+t=2026-05-23T21:36:46-0400 lvl=info msg="join connections" obj=join id=4d4dd8f69021 l=127.0.0.1:8081 r=170.82.209.140:52951
+t=2026-05-23T21:39:35-0400 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=d339d56e665a err="read tcp 192.168.100.128:61549->3.12.62.205:443: wsarecv: An established connection was aborted by the software in your host machine."
+t=2026-05-23T21:39:35-0400 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-05-23T21:39:35-0400 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-05-23T21:39:36-0400 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-05-23T21:39:38-0400 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-05-23T21:39:42-0400 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-05-23T21:39:51-0400 lvl=info msg="client session established" obj=tunnels.session
+t=2026-05-23T21:39:51-0400 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-05-23T21:39:53-0400 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=59fd1fa21e3f clientid=2bf9cb50bb97a9702cb32d6e22f4450a
+t=2026-05-23T22:19:20-0400 lvl=info msg="join connections" obj=join id=85c9da5eda1c l=127.0.0.1:8081 r=170.82.209.140:56478
+t=2026-05-23T22:19:21-0400 lvl=info msg="join connections" obj=join id=c9a11c900479 l=127.0.0.1:8081 r=170.82.209.140:56478
+t=2026-05-23T22:19:21-0400 lvl=info msg="join connections" obj=join id=02356c978563 l=127.0.0.1:8081 r=170.82.209.140:56478

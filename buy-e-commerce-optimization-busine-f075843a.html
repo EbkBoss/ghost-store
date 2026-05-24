@@ -17,4 +17,23 @@ h1{color:#00d4ff;font-size:2em}.price{font-size:3em;color:#fff;margin:20px 0}.de
 <a class="btn" href="https://paypal.me/Nicholasram17/10" target="_blank">Buy Now — $10</a>
 <div class="order-id">Order ref: GHOST-f075843a</div>
 <div class="footer">Ghost AI · All products delivered digitally</div>
+
+<script>
+(function(){
+  // Ghost Protocol Tracker v1
+  var t = new Date().getTime();
+  var d = window.location.pathname;
+  var r = document.referrer || '';
+  var s = window.screen ? window.screen.width+'x'+window.screen.height : '';
+  
+  var img = new Image();
+  img.src = '/track.gif?p='+encodeURIComponent(d)+'&r='+encodeURIComponent(r)+'&s='+s+'&t='+t;
+  img.style.display = 'none';
+  document.body.appendChild(img);
+  
+  // Also log to console for debug
+  console.log('GhostTracker: '+d);
+})();
+</script>
+
 </body></html>

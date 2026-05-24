@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://scarily-blatancy-washday.ngrok-free.dev/sitemap.xml
+Sitemap: https://EbkBoss.github.io/ghost-store/sitemap.xml
+
+# Disallow internal pages
+Disallow: /admin.html
