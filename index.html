@@ -1,231 +1,806 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ghost — AI Digital Products</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghost Protocol — Premium AI Digital Products</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e0e0e0;line-height:1.6}
-.hdr{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);padding:60px 20px;text-align:center;border-bottom:1px solid #1e3a5f}
-.hdr h1{font-size:3.5em;background:linear-gradient(90deg,#00d4ff,#7b2ff7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px}
-.hdr p{color:#8899aa;margin-top:8px;font-size:1.1em}
-.stats{display:flex;justify-content:center;gap:50px;padding:25px;background:#0d0d1a}
-.stat{text-align:center;min-width:100px}
-.sv{font-size:2.2em;font-weight:bold;color:#00d4ff;display:block}
-.sl{font-size:0.8em;color:#556;margin-top:2px}
-.cont{max-width:1200px;margin:0 auto;padding:30px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin:30px 0}
-.pc{background:#111122;border:1px solid #1e3a5f;border-radius:14px;padding:24px;transition:all 0.25s}
-.pc:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,212,255,0.12);border-color:#2a5a8f}
-.ptype{display:inline-block;background:#1a3a5f;color:#66bbff;padding:3px 10px;border-radius:20px;font-size:0.7em;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px}
-.pc h3{font-size:1.05em;margin-bottom:10px;color:#fff;line-height:1.4}
-.pc p{font-size:0.85em;color:#778;margin-bottom:16px;line-height:1.5}
-.pf{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid #1a2a3f}
-.pr{font-size:1.6em;font-weight:bold;color:#00d4ff}
-.btn{background:linear-gradient(90deg,#00d4ff,#7b2ff7);color:#fff;padding:10px 28px;border-radius:8px;text-decoration:none;font-weight:bold;transition:opacity 0.2s;display:inline-block}
-.btn:hover{opacity:0.9}
-.sec{margin:50px 0}
-.sec h2{color:#7b2ff7;margin-bottom:20px;font-size:1.5em;display:flex;align-items:center;gap:10px}
-.sec h2 span{background:#1e3a5f;padding:2px 12px;border-radius:20px;font-size:0.6em;color:#00d4ff}
-.how-box{background:#0d0d1a;border:1px solid #1e3a5f;border-radius:14px;padding:30px}
-.how-box ol{padding-left:20px;color:#8899aa}
-.how-box li{margin:12px 0;font-size:1.05em}
-.how-box li strong{color:#e0e0e0}
-.ads-box{background:#0d0d1a;border:1px solid #1e3a5f;border-radius:14px;padding:20px}
-.ad-item{padding:12px 10px;border-bottom:1px solid #1a2a3f;font-family:monospace;font-size:0.82em;color:#aab;display:flex;gap:10px;align-items:center}
-.ad-item:last-child{border-bottom:none}
-.ad-plat{color:#00d4ff;font-size:0.75em;min-width:60px;text-transform:uppercase}
-.ftr{text-align:center;padding:40px;color:#334;font-size:0.8em;border-top:1px solid #1a2a3f;margin-top:40px}
-@media(max-width:600px){.stats{gap:20px}.hdr h1{font-size:2.5em}}
-</style></head><body>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#07070d;color:#e0e0e0;line-height:1.6}
+.hdr{background:linear-gradient(135deg,#0a0a1a 0%,#1a0a2e 50%,#0a1a2e 100%);padding:80px 20px 60px;text-align:center;border-bottom:1px solid #1e1e3f;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,rgba(123,47,247,0.08) 0%,transparent 50%),radial-gradient(circle at 70% 50%,rgba(0,212,255,0.06) 0%,transparent 50%);pointer-events:none}
+.hdr h1{font-size:3.8em;background:linear-gradient(90deg,#00d4ff,#7b2ff7,#ff2d95);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1.5px;margin-bottom:8px}
+.hdr .sub{color:#667;font-size:1.15em;max-width:600px;margin:0 auto}
+.tagline{color:#889;margin-top:6px;font-size:0.95em}
+.stats{display:flex;justify-content:center;gap:60px;padding:30px;background:#0a0a14;border-bottom:1px solid #12122a}
+.stat{text-align:center}
+.sv{font-size:2.4em;font-weight:bold;color:#00d4ff;display:block}
+.sl{font-size:0.8em;color:#556;margin-top:2px;text-transform:uppercase;letter-spacing:0.5px}
+.cont{max-width:1300px;margin:0 auto;padding:40px 20px}
+.sec{margin:40px 0}
+.sec h2{color:#7b2ff7;font-size:1.4em;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.sec h2 span{background:#1a1a3f;padding:3px 14px;border-radius:20px;font-size:0.6em;color:#00d4ff;text-transform:uppercase;letter-spacing:0.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin:20px 0}
+.pc{background:#0d0d1e;border:1px solid #1a1a3f;border-radius:16px;padding:24px;transition:all 0.3s;display:flex;flex-direction:column}
+.pc:hover{transform:translateY(-4px);border-color:#7b2ff7;box-shadow:0 16px 40px rgba(123,47,247,0.15)}
+.pc.bundle{border-color:#7b2ff744;background:linear-gradient(135deg,#0d0d2e,#1a0a2e)}
+.pc.bundle:hover{border-color:#7b2ff7;box-shadow:0 16px 40px rgba(123,47,247,0.25)}
+.ptype{display:inline-block;background:#1a1a3f;color:#66bbff;padding:3px 12px;border-radius:20px;font-size:0.65em;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.8px}
+.pc h3{font-size:1em;margin-bottom:6px;color:#fff;line-height:1.4;flex:1}
+.pc .niche{font-size:0.75em;color:#556;margin-bottom:14px}
+.pf{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #1a1a3f;margin-top:auto}
+.pr{font-size:1.5em;font-weight:bold;color:#00d4ff}
+.btn{background:linear-gradient(90deg,#7b2ff7,#ff2d95);color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:0.9em;transition:opacity 0.2s;display:inline-block;border:none;cursor:pointer}
+.btn:hover{opacity:0.88;transform:scale(1.02)}
+.btn.ghost{background:linear-gradient(90deg,#00d4ff,#7b2ff7)}
+.how{background:#0a0a18;border:1px solid #1a1a3f;border-radius:16px;padding:40px;margin:30px 0}
+.how h2{color:#7b2ff7;margin-bottom:20px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.step{text-align:center;padding:20px}
+.step .num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#7b2ff7,#00d4ff);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:bold;color:#fff;font-size:1.1em}
+.step h4{color:#fff;margin-bottom:6px;font-size:0.95em}
+.step p{color:#667;font-size:0.85em}
+.footer{text-align:center;padding:40px;color:#445;font-size:0.85em;border-top:1px solid #1a1a3f;margin-top:40px}
+@media(max-width:600px){.hdr h1{font-size:2.2em} .stats{gap:20px;flex-wrap:wrap} .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
 <div class="hdr">
-    <h1>Ghost</h1>
-    <p>AI-generated digital products · Instant delivery · Zero subscriptions</p>
+  <h1>Ghost Protocol</h1>
+  <p class="sub">Premium AI-crafted digital products. Instant delivery. Lifetime access.</p>
+  <p class="tagline">From templates to toolkits — everything you need to build, market, and scale your business</p>
 </div>
+
 <div class="stats">
-    <div class="stat"><span class="sv">27</span><span class="sl">Products</span></div>
-    <div class="stat"><span class="sv">$489</span><span class="sl">Total Value</span></div>
-    <div class="stat"><span class="sv">6</span><span class="sl">Articles</span></div>
+  <div class="stat"><span class="sv">108</span><span class="sl">Products</span></div>
+  <div class="stat"><span class="sv">$5 - $997</span><span class="sl">Price Range</span></div>
+  <div class="stat"><span class="sv">$6388</span><span class="sl">Catalog Value</span></div>
+  <div class="stat"><span class="sv">$59</span><span class="sl">Avg Price</span></div>
 </div>
+
 <div class="cont">
-    <div class="sec">
-        <h2>Digital Products <span>27 unique</span></h2>
-        <div class="grid">
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>Real Estate Investing Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the full potential of your real‑estate venture with the Real Estate Investing Business Template Pack – 25 Ready‑to‑Use Templates. Designed spec</p>
-    <div class="pf"><span class="pr">$27</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/27" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Toolkit</div>
-    <h3>Customer Service Automation Toolkit — 50 AI-Powered Resources</h3>
-    <p>Unlock lightning‑fast customer support with the Customer Service Automation Toolkit — 50 AI‑Powered Resources. Designed specifically for entrepreneurs</p>
-    <div class="pf"><span class="pr">$32</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/32" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>AI Image Generation Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the full potential of your AI image generation business with our AI Image Generation Business Template Pack — 25 Ready‑to‑Use Templates. Design</p>
-    <div class="pf"><span class="pr">$15</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/15" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>AI Content Creation Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the full potential of your AI‑powered content business with the AI Content Creation Business Template Pack — 25 Ready‑to‑Use Templates. Designe</p>
-    <div class="pf"><span class="pr">$35</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/35" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>SEO Optimization Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Professional-grade toolkit with curated resources, checklists, and frameworks to accelerate your workflow and boost output.</p>
-    <div class="pf"><span class="pr">$12</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/12" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Prompt Pack</div>
-    <h3>Real Estate Investing Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
-    <p>Ready-to-use digital templates designed for professionals. Save hours of work with our pre-built, customizable templates.</p>
-    <div class="pf"><span class="pr">$11</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/11" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Prompt Pack</div>
-    <h3>Digital Marketing Prompt Pack — 100 ChatGPT Prompts for Freelancers</h3>
-    <p>Comprehensive guide packed with actionable strategies, expert insights, and step-by-step instructions for immediate results.</p>
-    <div class="pf"><span class="pr">$11</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/11" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>Affiliate Marketing Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the full potential of your affiliate marketing journey with the Affiliate Marketing Business Template Pack – 25 Ready‑to‑Use Templates. Designe</p>
-    <div class="pf"><span class="pr">$21</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/21" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Mini Guide</div>
-    <h3>The Professionals Guide to AI Image Generation — Complete Blueprint</h3>
-    <p>Unlock the full potential of AI image generation with 'The Professionals Guide to AI Image Generation — Complete Blueprint'. This concise yet comprehe</p>
-    <div class="pf"><span class="pr">$14</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/14" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Prompt Pack</div>
-    <h3>AI Image Generation Prompt Pack — 100 ChatGPT Prompts for Entrepreneurs</h3>
-    <p>Ready-to-use digital templates designed for professionals. Save hours of work with our pre-built, customizable templates.</p>
-    <div class="pf"><span class="pr">$13</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/13" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>Lead Generation Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Lead Generation Business Template Pack — 25 Ready-to-Use Templates is the ultimate toolkit for small business owners who want to attract, capture, and</p>
-    <div class="pf"><span class="pr">$19</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Prompt Pack</div>
-    <h3>Productivity Systems Prompt Pack — 100 ChatGPT Prompts for Beginners</h3>
-    <p>Professional-grade toolkit with curated resources, checklists, and frameworks to accelerate your workflow and boost output.</p>
-    <div class="pf"><span class="pr">$23</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/23" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Mini Guide</div>
-    <h3>The Marketers Guide to Podcast Production — Complete Blueprint</h3>
-    <p>Are you a marketer who wants to harness the power of podcasting but don’t know where to start? The Marketer’s Guide to Podcast Production — Complete B</p>
-    <div class="pf"><span class="pr">$7</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/7" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Prompt Pack</div>
-    <h3>AI Content Creation Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
-    <p>Expert-crafted collection of prompts, templates, and tools designed to streamline your workflow and maximize efficiency.</p>
-    <div class="pf"><span class="pr">$25</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/25" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Mini Guide</div>
-    <h3>The Professionals Guide to Affiliate Marketing — Complete Blueprint</h3>
-    <p>Comprehensive guide packed with actionable strategies, expert insights, and step-by-step instructions for immediate results.</p>
-    <div class="pf"><span class="pr">$10</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/10" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Prompt Pack</div>
-    <h3>Personal Finance Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
-    <p>Expert-crafted collection of prompts, templates, and tools designed to streamline your workflow and maximize efficiency.</p>
-    <div class="pf"><span class="pr">$12</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/12" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>Online Course Creation Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Professional-grade toolkit with curated resources, checklists, and frameworks to accelerate your workflow and boost output.</p>
-    <div class="pf"><span class="pr">$14</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/14" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Toolkit</div>
-    <h3>AI Image Generation Toolkit — 50 AI-Powered Resources</h3>
-    <p>Professional-grade toolkit with curated resources, checklists, and frameworks to accelerate your workflow and boost output.</p>
-    <div class="pf"><span class="pr">$19</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>Digital Marketing Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Are you an entrepreneur looking to elevate your digital marketing game without the headache of starting from scratch? The Digital Marketing Business T</p>
-    <div class="pf"><span class="pr">$32</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/32" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Mini Guide</div>
-    <h3>The Marketers Guide to Lead Generation — Complete Blueprint</h3>
-    <p>The Marketer’s Guide to Lead Generation – Complete Blueprint is the definitive, no‑fluff resource that turns your marketing knowledge into a high‑perf</p>
-    <div class="pf"><span class="pr">$14</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/14" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>ChatGPT Prompt Engineering Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the full potential of ChatGPT for your marketing team with our ChatGPT Prompt Engineering Business Template Pack. This pack is designed for mar</p>
-    <div class="pf"><span class="pr">$11</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/11" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Mini Guide</div>
-    <h3>The Beginners Guide to Podcast Production — Complete Blueprint</h3>
-    <p>Are you dreaming of launching your own podcast but feel overwhelmed by the technical jargon and endless equipment lists? The Beginners Guide to Podcas</p>
-    <div class="pf"><span class="pr">$7</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/7" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>Productivity Systems Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the power of streamlined productivity with the Productivity Systems Business Template Pack — 25 Ready-to-Use Templates. This pack is engineered</p>
-    <div class="pf"><span class="pr">$23</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/23" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>E-commerce Optimization Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the full potential of your e‑commerce clients’ stores with the E‑commerce Optimization Business Template Pack – 25 Ready‑to‑Use Templates. Desi</p>
-    <div class="pf"><span class="pr">$10</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/10" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Mini Guide</div>
-    <h3>The Marketers Guide to Digital Marketing — Complete Blueprint</h3>
-    <p>Unlock the secrets of modern digital marketing with *The Marketer’s Guide to Digital Marketing — Complete Blueprint*. Whether you’re a seasoned strate</p>
-    <div class="pf"><span class="pr">$12</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/12" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Template Pack</div>
-    <h3>Podcast Production Business Template Pack — 25 Ready-to-Use Templates</h3>
-    <p>Unlock the full potential of your podcasting business with the Podcast Production Business Template Pack — 25 Ready‑to‑Use Templates. Whether you’re a</p>
-    <div class="pf"><span class="pr">$25</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/25" target="_blank">Buy</a></div>
-</div>
-<div class="pc">
-    <div class="ptype">Toolkit</div>
-    <h3>AI Content Creation Toolkit — 50 AI-Powered Resources</h3>
-    <p>Comprehensive guide packed with actionable strategies, expert insights, and step-by-step instructions for immediate results.</p>
-    <div class="pf"><span class="pr">$35</span><a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/35" target="_blank">Buy</a></div>
-</div></div>
+  <div class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>Browse &amp; Buy</h4>
+        <p>Find what you need, pay via PayPal</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>Copy Transaction ID</h4>
+        <p>From your PayPal receipt</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>Claim Instantly</h4>
+        <p><a href="https://scarily-blatancy-washday.ngrok-free.dev/claim.html" style="color:#66bbff">Go to claim page</a>, enter your Transaction ID</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h4>Get Your Product</h4>
+        <p>Emailed to you immediately. Lifetime access.</p>
+      </div>
     </div>
-    <div class="sec">
-        <h2>How It Works</h2>
-        <div class="how-box">
-            <ol>
-                <li><strong>Choose</strong> a product from the grid above</li>
-                <li><strong>Click Buy</strong> — redirected to PayPal.Me/Nicholasram17</li>
-                <li><strong>Complete payment</strong> on PayPal (secure checkout)</li>
-                <li><strong>Receive delivery</strong> via email within minutes</li>
-                <li><strong>Lifetime access</strong> — download anytime, no recurring fees</li>
-            </ol>
-        </div>
-    </div></div>
-<div class="ftr">
-    <p>Ghost AI · Autonomous digital organism · Generated 2026-05-23 11:42</p>
-    <p>PayPal: www.paypal.com/paypalme/Nicholasram17 · All products delivered digitally</p>
+  </div><div class="sec">
+    <h2>🔥 Premium Bundles <span>Best Value</span></h2>
+    <div class="grid">    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Ghost Protocol VIP — Lifetime Access Pass</h3>
+      <p class="niche">VIP Access</p>
+      <div class="pf">
+        <span class="pr">$997</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/997" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Ghost Protocol Agency Partner — Full License Bundle</h3>
+      <p class="niche">Business</p>
+      <div class="pf">
+        <span class="pr">$997</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/997" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>AI Business Empire — Complete Turnkey System</h3>
+      <p class="niche">AI Business</p>
+      <div class="pf">
+        <span class="pr">$497</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/497" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Marketing Automation Suite — 15 Premium Systems</h3>
+      <p class="niche">Marketing Automation</p>
+      <div class="pf">
+        <span class="pr">$447</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/447" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Digital Product Tycoon — 30 Product Mega Bundle</h3>
+      <p class="niche">Digital Products</p>
+      <div class="pf">
+        <span class="pr">$397</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/397" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Ghost Protocol Mega Bundle — All 80+ Products</h3>
+      <p class="niche">Mega Bundle</p>
+      <div class="pf">
+        <span class="pr">$197</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/197" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Developer's Money-Making Bundle — 8 Products</h3>
+      <p class="niche">Development</p>
+      <div class="pf">
+        <span class="pr">$177</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/177" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Business Automation Suite — 8 Premium Systems</h3>
+      <p class="niche">Automation</p>
+      <div class="pf">
+        <span class="pr">$147</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/147" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>AI Entrepreneur Complete Kit — 15 Premium Products</h3>
+      <p class="niche">Entrepreneurship</p>
+      <div class="pf">
+        <span class="pr">$147</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/147" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>AI Content Empire — 10 Content Products</h3>
+      <p class="niche">Content Creation</p>
+      <div class="pf">
+        <span class="pr">$127</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/127" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Social Media Domination Pack — 12 Products</h3>
+      <p class="niche">Social Media</p>
+      <div class="pf">
+        <span class="pr">$97</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/97" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Freelancer's Ultimate Toolkit — 10 Products</h3>
+      <p class="niche">Freelancing</p>
+      <div class="pf">
+        <span class="pr">$97</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/97" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc bundle">
+      <div class="ptype">Bundle</div>
+      <h3>Digital Marketing Master Bundle — 12 Products</h3>
+      <p class="niche">Marketing</p>
+      <div class="pf">
+        <span class="pr">$97</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/97" target="_blank">Buy Now</a>
+      </div>
+    </div></div></div><div class="sec">
+    <h2>📋 Template Packs <span>37 products</span></h2>
+    <div class="grid">    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>AI Automation Workflows — 25 Ready-to-Deploy Systems</h3>
+      <p class="niche">AI Automation</p>
+      <div class="pf">
+        <span class="pr">$47</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/47" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Pitch Deck Template Pack — 25 Investor-Ready Decks</h3>
+      <p class="niche">Business</p>
+      <div class="pf">
+        <span class="pr">$44</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/44" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>E-commerce Optimization Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">E-commerce Optimization</p>
+      <div class="pf">
+        <span class="pr">$37</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/37" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>AI Content Creation Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">AI Content Creation</p>
+      <div class="pf">
+        <span class="pr">$35</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/35" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Email Sequence Master Pack — 100 Ready-to-Send Emails</h3>
+      <p class="niche">Email Marketing</p>
+      <div class="pf">
+        <span class="pr">$34</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/34" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Sales Copywriting Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Sales Copywriting</p>
+      <div class="pf">
+        <span class="pr">$34</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/34" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Digital Marketing Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Digital Marketing</p>
+      <div class="pf">
+        <span class="pr">$32</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/32" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Video Editing Business Template Pack — 25 Templates</h3>
+      <p class="niche">Video Production</p>
+      <div class="pf">
+        <span class="pr">$31</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/31" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Notion Business OS — 25 Premium Templates</h3>
+      <p class="niche">Notion Templates</p>
+      <div class="pf">
+        <span class="pr">$29</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/29" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>AI Image Generation Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">AI Image Generation</p>
+      <div class="pf">
+        <span class="pr">$28</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/28" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Copywriting Conversion Pack — 100 Swipe Templates</h3>
+      <p class="niche">Copywriting</p>
+      <div class="pf">
+        <span class="pr">$27</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/27" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Productivity Systems Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Productivity Systems</p>
+      <div class="pf">
+        <span class="pr">$27</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/27" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Real Estate Investing Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Real Estate Investing</p>
+      <div class="pf">
+        <span class="pr">$27</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/27" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Sales Copywriting Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Sales Copywriting</p>
+      <div class="pf">
+        <span class="pr">$25</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/25" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Podcast Production Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Podcast Production</p>
+      <div class="pf">
+        <span class="pr">$25</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/25" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Project Management Pro Pack — 25 Templates</h3>
+      <p class="niche">Project Management</p>
+      <div class="pf">
+        <span class="pr">$24</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/24" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Sales Copywriting Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Sales Copywriting</p>
+      <div class="pf">
+        <span class="pr">$24</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/24" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>YouTube Growth Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">YouTube Growth</p>
+      <div class="pf">
+        <span class="pr">$23</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/23" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Productivity Systems Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Productivity Systems</p>
+      <div class="pf">
+        <span class="pr">$23</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/23" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Excel Business Dashboard Pack — 25 Templates</h3>
+      <p class="niche">Excel/Sheets</p>
+      <div class="pf">
+        <span class="pr">$22</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/22" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Negotiation Skills Pro Pack — 25 Templates</h3>
+      <p class="niche">Sales</p>
+      <div class="pf">
+        <span class="pr">$21</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/21" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Email Marketing Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Email Marketing</p>
+      <div class="pf">
+        <span class="pr">$21</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/21" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Affiliate Marketing Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Affiliate Marketing</p>
+      <div class="pf">
+        <span class="pr">$21</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/21" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Sales Copywriting Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Sales Copywriting</p>
+      <div class="pf">
+        <span class="pr">$20</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/20" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Freelance Contract and Proposal Pack — 25 Templates</h3>
+      <p class="niche">Freelancing</p>
+      <div class="pf">
+        <span class="pr">$19</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Time Management System — 25 Templates</h3>
+      <p class="niche">Productivity</p>
+      <div class="pf">
+        <span class="pr">$19</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Lead Generation Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Lead Generation</p>
+      <div class="pf">
+        <span class="pr">$19</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>AI Image Generation Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">AI Image Generation</p>
+      <div class="pf">
+        <span class="pr">$15</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/15" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Online Course Creation Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Online Course Creation</p>
+      <div class="pf">
+        <span class="pr">$14</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/14" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>AI Content Creation Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">AI Content Creation</p>
+      <div class="pf">
+        <span class="pr">$14</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/14" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Freelance Writing Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Freelance Writing</p>
+      <div class="pf">
+        <span class="pr">$13</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/13" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>SEO Optimization Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">SEO Optimization</p>
+      <div class="pf">
+        <span class="pr">$12</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/12" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Real Estate Investing Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Real Estate Investing</p>
+      <div class="pf">
+        <span class="pr">$12</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/12" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>Digital Marketing Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">Digital Marketing</p>
+      <div class="pf">
+        <span class="pr">$12</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/12" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>ChatGPT Prompt Engineering Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">ChatGPT Prompt Engineering</p>
+      <div class="pf">
+        <span class="pr">$11</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/11" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>E-commerce Optimization Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">E-commerce Optimization</p>
+      <div class="pf">
+        <span class="pr">$10</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/10" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Templates</div>
+      <h3>E-commerce Optimization Business Template Pack — 25 Ready-to-Use Templates</h3>
+      <p class="niche">E-commerce Optimization</p>
+      <div class="pf">
+        <span class="pr">$10</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/10" target="_blank">Buy Now</a>
+      </div>
+    </div></div></div><div class="sec">
+    <h2>🧰 Toolkits <span>17 products</span></h2>
+    <div class="grid">    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>SEO Optimization Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">SEO Optimization</p>
+      <div class="pf">
+        <span class="pr">$38</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/38" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Affiliate Marketing Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">Affiliate Marketing</p>
+      <div class="pf">
+        <span class="pr">$38</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/38" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>AI Customer Support Toolkit — 50 Resources</h3>
+      <p class="niche">AI Automation</p>
+      <div class="pf">
+        <span class="pr">$37</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/37" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Python Automation Scripts Pack — 50 Ready-to-Run Scripts</h3>
+      <p class="niche">Python</p>
+      <div class="pf">
+        <span class="pr">$37</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/37" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>AI Content Creation Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">AI Content Creation</p>
+      <div class="pf">
+        <span class="pr">$35</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/35" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>TikTok Growth Toolkit — 50 Viral Video Resources</h3>
+      <p class="niche">TikTok Marketing</p>
+      <div class="pf">
+        <span class="pr">$34</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/34" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Business Finance Toolkit — 50 Resources</h3>
+      <p class="niche">Business Finance</p>
+      <div class="pf">
+        <span class="pr">$33</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/33" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Small Business Automation Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">Small Business Automation</p>
+      <div class="pf">
+        <span class="pr">$33</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/33" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Customer Service Automation Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">Customer Service Automation</p>
+      <div class="pf">
+        <span class="pr">$32</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/32" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Online Course Creation Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">Online Course Creation</p>
+      <div class="pf">
+        <span class="pr">$31</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/31" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Sales Scripts That Close — 50 Ready-to-Use Scripts</h3>
+      <p class="niche">Sales</p>
+      <div class="pf">
+        <span class="pr">$29</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/29" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Personal Brand Authority Kit — 50 Resources</h3>
+      <p class="niche">Personal Branding</p>
+      <div class="pf">
+        <span class="pr">$29</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/29" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Customer Service Automation Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">Customer Service Automation</p>
+      <div class="pf">
+        <span class="pr">$21</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/21" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Career Accelerator Toolkit — 50 Resources</h3>
+      <p class="niche">Career Development</p>
+      <div class="pf">
+        <span class="pr">$19</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Affiliate Marketing Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">Affiliate Marketing</p>
+      <div class="pf">
+        <span class="pr">$19</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>AI Image Generation Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">AI Image Generation</p>
+      <div class="pf">
+        <span class="pr">$19</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/19" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Toolkit</div>
+      <h3>Customer Service Automation Toolkit — 50 AI-Powered Resources</h3>
+      <p class="niche">Customer Service Automation</p>
+      <div class="pf">
+        <span class="pr">$16</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/16" target="_blank">Buy Now</a>
+      </div>
+    </div></div></div><div class="sec">
+    <h2>📘 Blueprints & Guides <span>10 products</span></h2>
+    <div class="grid">    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>Data Analysis with Python — Complete Blueprint</h3>
+      <p class="niche">Data Science</p>
+      <div class="pf">
+        <span class="pr">$27</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/27" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>SaaS Product Launch Playbook — Complete Blueprint</h3>
+      <p class="niche">SaaS</p>
+      <div class="pf">
+        <span class="pr">$26</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/26" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>No-Code SaaS Builder — Complete Guide</h3>
+      <p class="niche">No-Code</p>
+      <div class="pf">
+        <span class="pr">$24</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/24" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>Facebook Ads Profit System — Complete Blueprint</h3>
+      <p class="niche">Facebook Ads</p>
+      <div class="pf">
+        <span class="pr">$22</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/22" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>Google Ads Profit System — Complete Blueprint</h3>
+      <p class="niche">Google Ads</p>
+      <div class="pf">
+        <span class="pr">$21</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/21" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>Instagram Growth Engine — Complete Blueprint</h3>
+      <p class="niche">Instagram</p>
+      <div class="pf">
+        <span class="pr">$18</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/18" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>LinkedIn Lead Machine — Complete Blueprint</h3>
+      <p class="niche">LinkedIn Marketing</p>
+      <div class="pf">
+        <span class="pr">$17</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/17" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>Public Speaking Mastery — Complete Blueprint</h3>
+      <p class="niche">Communication</p>
+      <div class="pf">
+        <span class="pr">$16</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/16" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>Cold Email That Converts — Complete Blueprint</h3>
+      <p class="niche">Email Marketing</p>
+      <div class="pf">
+        <span class="pr">$16</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/16" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Guide</div>
+      <h3>Crypto & Blockchain Basics — Complete Blueprint</h3>
+      <p class="niche">Crypto</p>
+      <div class="pf">
+        <span class="pr">$14</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/14" target="_blank">Buy Now</a>
+      </div>
+    </div></div></div><div class="sec">
+    <h2>💬 Prompt Packs <span>11 products</span></h2>
+    <div class="grid">    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>ChatGPT for Business — 200 Advanced Prompts</h3>
+      <p class="niche">ChatGPT</p>
+      <div class="pf">
+        <span class="pr">$27</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/27" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>AI Content Creation Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
+      <p class="niche">AI Content Creation</p>
+      <div class="pf">
+        <span class="pr">$25</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/25" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>Prompt Engineering Mastery — 300 Prompts</h3>
+      <p class="niche">ChatGPT</p>
+      <div class="pf">
+        <span class="pr">$23</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/23" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>Productivity Systems Prompt Pack — 100 ChatGPT Prompts for Beginners</h3>
+      <p class="niche">Productivity Systems</p>
+      <div class="pf">
+        <span class="pr">$23</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/23" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>Online Course Creation Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
+      <p class="niche">Online Course Creation</p>
+      <div class="pf">
+        <span class="pr">$21</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/21" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>AI Image Generation Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
+      <p class="niche">AI Image Generation</p>
+      <div class="pf">
+        <span class="pr">$14</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/14" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>Freelance Writing Prompt Pack — 100 ChatGPT Prompts for Small Business Owners</h3>
+      <p class="niche">Freelance Writing</p>
+      <div class="pf">
+        <span class="pr">$13</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/13" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>AI Image Generation Prompt Pack — 100 ChatGPT Prompts for Entrepreneurs</h3>
+      <p class="niche">AI Image Generation</p>
+      <div class="pf">
+        <span class="pr">$13</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/13" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>Personal Finance Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
+      <p class="niche">Personal Finance</p>
+      <div class="pf">
+        <span class="pr">$12</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/12" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>Real Estate Investing Prompt Pack — 100 ChatGPT Prompts for Marketers</h3>
+      <p class="niche">Real Estate Investing</p>
+      <div class="pf">
+        <span class="pr">$11</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/11" target="_blank">Buy Now</a>
+      </div>
+    </div>    <div class="pc ">
+      <div class="ptype">Prompts</div>
+      <h3>Digital Marketing Prompt Pack — 100 ChatGPT Prompts for Freelancers</h3>
+      <p class="niche">Digital Marketing</p>
+      <div class="pf">
+        <span class="pr">$11</span>
+        <a class="btn" href="https://www.paypal.com/paypalme/Nicholasram17/11" target="_blank">Buy Now</a>
+      </div>
+    </div></div></div></div>
+<div class="footer">
+  Ghost Protocol &mdash; Premium AI Digital Products<br>
+  Questions? <a href="https://www.paypal.com/paypalme/Nicholasram17" style="color:#66bbff">Contact via PayPal</a>
 </div>
-</body></html>
+</body>
+</html>
